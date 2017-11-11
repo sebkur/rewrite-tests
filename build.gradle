@@ -22,6 +22,13 @@ repositories {
 }
 
 dependencies {
+    compile files("${System.properties['java.home']}/../lib/tools.jar")
+    compile 'com.netflix.devinsight.rewrite:rewrite-core:1.2.0'
+    compile 'de.topobyte:system-utils:0.0.1'
+
+    compile 'org.slf4j:slf4j-api:1.6.1'
+    runtime 'org.slf4j:slf4j-log4j12:1.6.1'
+    runtime 'log4j:log4j:1.2.16'
 }
 
 task copyJars(type: Copy) {
